@@ -1,6 +1,3 @@
-// server.js
-// where your node app starts
-
 // init project
 var express = require('express');
 var app = express();
@@ -19,8 +16,7 @@ app.get("/", function (req, res) {
 });
 
 
-// your first API endpoint... 
-
+//API endpoints
 app.get("/api", function(req, res){
   res.json({
     unix: (new Date()).getTime(),
@@ -54,9 +50,7 @@ app.get("/api/:date", function(req, res){
   })
 })
 
-
-
-// listen for requests :)
+// listen for requests
 var listener = app.listen(process.env.PORT, function () {
   console.log('Your app is listening on port ' + listener.address().port);
 });
